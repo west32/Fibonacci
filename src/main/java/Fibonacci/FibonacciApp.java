@@ -17,12 +17,11 @@ public class FibonacciApp {
         Scanner scanner = new Scanner(System.in);
         int option = scanner.nextInt();
 
-        FileConsumer fileConsumer = new FileConsumer();
-        PrintConsumer printConsumer = new PrintConsumer();
-
         if (option == 1) {
+            FileConsumer fileConsumer = new FileConsumer();
             count = new CountFibonacci(fileConsumer);
         } else if (option == 2) {
+            PrintConsumer printConsumer = new PrintConsumer();
             count = new CountFibonacci(printConsumer);
         } else {
             System.out.println("Wrong number");
@@ -37,21 +36,5 @@ public class FibonacciApp {
 }
 
 
-//        final int filesave = 1;
-//        final int print = 2;
-//        int option = 0;
-//        Scanner scanner = new Scanner(System.in);
-//        option = scanner.nextInt();
-//        switch (option) {
-//            case filesave:
-//                FileConsumer fileConsumer = new FileConsumer();
-//                CountFibonacci count = new CountFibonacci(fileConsumer);
-//                break;
-//            case print:
-//                PrintConsumer printConsumer = new PrintConsumer();
-//                CountFibonacci count = new CountFibonacci(printConsumer);
-//        }
-
 //todo
-// 1.  caly kod fibonacci przeniesc do nowego projektu javovego i zrobienie z tego repo
-// 2. przeczytac stary i nowy artykul ( w nowym skupic sie na strategy)
+//

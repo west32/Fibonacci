@@ -43,11 +43,8 @@ public class CountFibonacci {
 
     }
 
-    void printList(List<Integer> list) {
-        for (Integer integer : list) {
-            System.out.println(integer);
-        }
-    }
+
+
 }
 
 

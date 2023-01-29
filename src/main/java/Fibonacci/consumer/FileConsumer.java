@@ -15,8 +15,8 @@ public class FileConsumer implements FibonacciConsumer {
         try {
             writer = new BufferedWriter(new FileWriter("bartek.txt"));
             for (int number : fibonacciCountResult) {
-                String numberAsString = String.valueOf(number);
-                writer.write(numberAsString);
+                String numberAsString = number + " | ";
+                writer.write(numberAsString );
             }
 
             writer.close();
