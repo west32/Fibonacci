@@ -1,8 +1,5 @@
 package Fibonacci;
 
-import Fibonacci.consumer.FileConsumer;
-import Fibonacci.consumer.PrintConsumer;
-
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -11,30 +8,24 @@ public class FibonacciApp {
 
     public static void main(String[] args) throws IOException {
 
-        CountFibonacci count = new CountFibonacci(null);
-        System.out.println(" input 1 to save nubers to file");
+
+        System.out.println(" input 1 to save numbers to file");
         System.out.println(" input 2 to print numbers");
         Scanner scanner = new Scanner(System.in);
-        int option = scanner.nextInt();
-
-        if (option == 1) {
-            FileConsumer fileConsumer = new FileConsumer();
-            count = new CountFibonacci(fileConsumer);
-        } else if (option == 2) {
-            PrintConsumer printConsumer = new PrintConsumer();
-            count = new CountFibonacci(printConsumer);
-        } else {
-            System.out.println("Wrong number");
-        }
-
+        int consumerStrategyType = scanner.nextInt();
 
         FibonacciScanner fibonaccscanner = new FibonacciScanner();
         int howManyNumbers = fibonaccscanner.getHowManyNumbers();
+        CountFibonacci count = new CountFibonacci( consumerStrategyType);
         count.countFibonacci(howManyNumbers);
 
     }
 }
 
-
-//todo
-//
+//TODO
+//1. dac mozliwosc ponownego wyboru jak wybierzez zly numer
+//2. stworzyc enum dla typow naszej strategii, google it "cast int to enum"
+//3. * Wizytor wzorzec (refactoring guru web) przeczytaj ze zrozumieniem, przemyslec i na next time opowiem
+// czy widze przestrzen w naszym kodzie na ten wzorzec
+//4. poprawic testy i rozpisal wszystkie edge casy jakie dodac do tego co sie teraz pojawily
+//rozpisac testy ktore nie musza dzialac ale napisane co bym tu stestowal itp

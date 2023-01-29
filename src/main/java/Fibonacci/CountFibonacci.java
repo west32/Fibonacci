@@ -1,18 +1,30 @@
 package Fibonacci;
 
-import Fibonacci.consumer.FibonacciConsumer;
+import Fibonacci.consumer.FibonacciConsumerStrategy;
+import Fibonacci.consumer.FileConsumerStrategy;
+import Fibonacci.consumer.PrintConsumerStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CountFibonacci {
 
-    private final FibonacciConsumer fibonacciConsumer;
+    private final FibonacciConsumerStrategy fibonacciConsumerStrategy;
 
-    public CountFibonacci(FibonacciConsumer fibonacciConsumer) {
-        this.fibonacciConsumer = fibonacciConsumer;
+    public CountFibonacci( int consumerStrategyType) {
 
+        if (consumerStrategyType == 1 ) {
+            this.fibonacciConsumerStrategy = new FileConsumerStrategy();
+
+        }else if (consumerStrategyType == 2 ){
+            this.fibonacciConsumerStrategy = new PrintConsumerStrategy();
+        }else {
+            throw new RuntimeException("not supported type");
+        }
     }
+
+
+
 
     public void countFibonacci(int howManyNumbers) {
 
@@ -21,7 +33,7 @@ public class CountFibonacci {
         int secondNumber = 1;
 
         if (howManyNumbers == 0) {
-            fibonacciConsumer.consumerFibonacci(fibonacciNumbers);
+            fibonacciConsumerStrategy.consumerFibonacci(fibonacciNumbers);
             return;
         }
         fibonacciNumbers.add(firstNumber);
@@ -38,7 +50,7 @@ public class CountFibonacci {
             }
         }
 
-        fibonacciConsumer.consumerFibonacci(fibonacciNumbers);
+        fibonacciConsumerStrategy.consumerFibonacci(fibonacciNumbers);
 
 
     }

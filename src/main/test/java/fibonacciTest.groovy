@@ -8,7 +8,7 @@ class fibonacciTest extends Specification {
     def "Fibonacci"() {
 
         given:
-        FakeConsumer fakeConsumer = new FakeConsumer()
+        FakeConsumerStrategy fakeConsumer = new FakeConsumerStrategy()
         CountFibonacci fibonacciCheck = new CountFibonacci(fakeConsumer)
         when:
         fibonacciCheck.countFibonacci(howManyNumbers)

@@ -1,8 +1,8 @@
-import Fibonacci.consumer.FibonacciConsumer;
+import Fibonacci.consumer.FibonacciConsumerStrategy;
 
 import java.util.Collection;
 
-public class FakeConsumer implements FibonacciConsumer {
+public class FakeConsumerStrategy implements FibonacciConsumerStrategy {
 
     private Collection<Integer> fibonacciNumbersList;
 

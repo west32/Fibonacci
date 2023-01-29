@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Collection;
 
-public class FileConsumer implements FibonacciConsumer {
+public class FileConsumerStrategy implements FibonacciConsumerStrategy {
 
     @Override
     public void consumerFibonacci(Collection<Integer> fibonacciCountResult) {
