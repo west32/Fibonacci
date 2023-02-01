@@ -12,13 +12,12 @@ public class CountFibonacci {
     private final FibonacciConsumerStrategy fibonacciConsumerStrategy;
 
     public CountFibonacci(int consumerStrategyType) {
-        ConsumerStrategyType file = ConsumerStrategyType.values(1);
-        ConsumerStrategyType print = ConsumerStrategyType.PRINT;
 
-        if (consumerStrategyType == file ) {
+
+        if (consumerStrategyType == ConsumerStrategyType.FILE.getValue() ) {
             this.fibonacciConsumerStrategy = new FileConsumerStrategy();
 
-        }else if (consumerStrategyType == print ){
+        }else if (consumerStrategyType == ConsumerStrategyType.PRINT.getValue() ){
             this.fibonacciConsumerStrategy = new PrintConsumerStrategy();
         }else {
             throw new RuntimeException("not supported type");
