@@ -1,4 +1,4 @@
-package Fibonacci;
+package pl.bartek.fibonacci;
 
 import java.util.HashMap;
 import java.util.Map;

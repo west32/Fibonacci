@@ -1,4 +1,4 @@
-package Fibonacci.consumer;
+package pl.bartek.fibonacci.consumer;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

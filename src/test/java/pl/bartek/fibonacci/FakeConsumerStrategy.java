@@ -1,4 +1,6 @@
-import Fibonacci.consumer.FibonacciConsumerStrategy;
+package pl.bartek.fibonacci;
+
+
 
 import java.util.Collection;
 

@@ -1,4 +1,4 @@
-package Fibonacci.consumer;
+package pl.bartek.fibonacci.consumer;
 
 import java.util.Collection;
 

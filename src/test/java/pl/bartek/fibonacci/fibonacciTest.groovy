@@ -1,4 +1,6 @@
-import Fibonacci.CountFibonacci
+package pl.bartek.fibonacci
+
+
 import spock.lang.Specification
 import spock.lang.Unroll
 
