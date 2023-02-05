@@ -1,8 +1,8 @@
-package Fibonacci;
+package pl.bartek.fibonacci;
 
-import Fibonacci.consumer.FibonacciConsumerStrategy;
-import Fibonacci.consumer.FileConsumerStrategy;
-import Fibonacci.consumer.PrintConsumerStrategy;
+import pl.bartek.fibonacci.consumer.FibonacciConsumerStrategy;
+import pl.bartek.fibonacci.consumer.FileConsumerStrategy;
+import pl.bartek.fibonacci.consumer.PrintConsumerStrategy;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +11,16 @@ public class CountFibonacci {
 
     private final FibonacciConsumerStrategy fibonacciConsumerStrategy;
 
-    public CountFibonacci(int consumerStrategyType) {
+    public CountFibonacci(ConsumerStrategyType consumerStrategyType) {
 
+        this.fibonacciConsumerStrategy = switch (consumerStrategyType) {
+            case FILE -> new FileConsumerStrategy();
+            case PRINT -> new PrintConsumerStrategy();
+        };
 
-        if (consumerStrategyType == ConsumerStrategyType.FILE.getValue() ) {
-            this.fibonacciConsumerStrategy = new FileConsumerStrategy();
-
-        }else if (consumerStrategyType == ConsumerStrategyType.PRINT.getValue() ){
-            this.fibonacciConsumerStrategy = new PrintConsumerStrategy();
-        }else {
-            throw new RuntimeException("not supported type");
-        }
+//        else {
+//            throw new RuntimeException("not supported type");
+//        }
     }
 
 

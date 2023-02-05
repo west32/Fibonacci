@@ -1,6 +1,5 @@
-package Fibonacci;
+package pl.bartek.fibonacci;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class FibonacciApp {
@@ -30,3 +29,4 @@ public class FibonacciApp {
 // czy widze przestrzen w naszym kodzie na ten wzorzec
 //4. poprawic testy i rozpisal wszystkie edge casy jakie dodac do tego co sie teraz pojawily
 //rozpisac testy ktore nie musza dzialac ale napisane co bym tu stestowal itp
+// czym sie rozni xml i json

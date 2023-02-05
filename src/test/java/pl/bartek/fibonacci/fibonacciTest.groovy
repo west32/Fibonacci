@@ -1,4 +1,6 @@
-import Fibonacci.CountFibonacci
+package pl.bartek.fibonacci
+
+
 import spock.lang.Specification
 import spock.lang.Unroll
 
@@ -9,7 +11,7 @@ class fibonacciTest extends Specification {
 
         given:
         FakeConsumerStrategy fakeConsumer = new FakeConsumerStrategy()
-        CountFibonacci fibonacciCheck = new CountFibonacci(fakeConsumer)
+        CountFibonacci fibonacciCheck = new CountFibonacci()
         when:
         fibonacciCheck.countFibonacci(howManyNumbers)
         then:
