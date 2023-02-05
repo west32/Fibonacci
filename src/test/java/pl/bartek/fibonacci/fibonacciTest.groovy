@@ -11,7 +11,7 @@ class fibonacciTest extends Specification {
 
         given:
         FakeConsumerStrategy fakeConsumer = new FakeConsumerStrategy()
-        CountFibonacci fibonacciCheck = new CountFibonacci(fakeConsumer)
+        CountFibonacci fibonacciCheck = new CountFibonacci()
         when:
         fibonacciCheck.countFibonacci(howManyNumbers)
         then:

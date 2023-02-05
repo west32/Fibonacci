@@ -2,6 +2,8 @@ package pl.bartek.fibonacci;
 
 
 
+import pl.bartek.fibonacci.consumer.FibonacciConsumerStrategy;
+
 import java.util.Collection;
 
 public class FakeConsumerStrategy implements FibonacciConsumerStrategy {
